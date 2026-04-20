@@ -1,0 +1,5 @@
+.env
+fundcount-backend/vendor/
+fundcount-frontend/node_modules/
+fundcount-backend/.env
+database/database.sqlite
