@@ -17,6 +17,7 @@ import {
   ChevronRight,
   PanelLeftClose,
   PanelLeft,
+  Brain,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -79,6 +80,18 @@ const navigation: NavSection[] = [
       { label: 'Imports', path: '/data/imports' },
     ],
   },
+  {
+    label: 'AI Intelligence',
+    icon: Brain,
+    children: [
+      { label: 'AI Dashboard', path: '/ai/dashboard' },
+      { label: 'Portfolio Analysis', path: '/ai/portfolio-analysis' },
+      { label: 'Ask AI', path: '/ai/query' },
+      { label: 'Predictions', path: '/ai/predictions' },
+      { label: 'Reconciliation', path: '/ai/reconciliation' },
+      { label: 'NAV Calculator', path: '/ai/nav-calculator' },
+    ],
+  },
   { label: 'Reports', icon: BarChart3, path: '/reports' },
   { label: 'Settings', icon: Settings, path: '/settings' },
 ];
@@ -127,7 +140,7 @@ export default function DashboardLayout() {
           <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-emerald-500/10 flex items-center justify-center">
             <DollarSign className="w-5 h-5 text-emerald-400" />
           </div>
-          {!collapsed && <span className="text-lg font-bold">FundCount</span>}
+          {!collapsed && <span className="text-lg font-bold">MultiFund AI</span>}
         </div>
 
         {/* Nav */}

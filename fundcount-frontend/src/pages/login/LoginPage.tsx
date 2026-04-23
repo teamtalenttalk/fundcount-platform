@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DollarSign, Loader2 } from 'lucide-react';
+import { Brain, Loader2 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -36,10 +36,10 @@ export default function LoginPage() {
         {/* Logo / Branding */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 mb-4">
-            <DollarSign className="w-8 h-8 text-emerald-400" />
+            <Brain className="w-8 h-8 text-emerald-400" />
           </div>
-          <h1 className="text-3xl font-bold text-white">FundCount</h1>
-          <p className="text-slate-400 mt-1">Portfolio Accounting Platform</p>
+          <h1 className="text-3xl font-bold text-white">MultiFund AI</h1>
+          <p className="text-slate-400 mt-1">AI-Powered Fund Accounting & Portfolio Management</p>
         </div>
 
         {/* Login Card */}

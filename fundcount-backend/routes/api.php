@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AccountController;
+use App\Http\Controllers\Api\AiController;
 use App\Http\Controllers\Api\AssetController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CapitalAccountController;
@@ -92,4 +93,15 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Trial Balance
     Route::get('/trial-balance', [TrialBalanceController::class, 'index']);
+
+    // AI Intelligence (Phase 2)
+    Route::prefix('ai')->group(function () {
+        Route::post('/portfolio-analysis', [AiController::class, 'portfolioAnalysis']);
+        Route::post('/query', [AiController::class, 'query']);
+        Route::post('/predictions', [AiController::class, 'predictions']);
+        Route::post('/reconciliation', [AiController::class, 'reconciliation']);
+        Route::post('/document-process', [AiController::class, 'documentProcess']);
+        Route::post('/nav-calculate', [AiController::class, 'navCalculate']);
+        Route::get('/dashboard', [AiController::class, 'dashboard']);
+    });
 });

@@ -48,6 +48,14 @@ import PartnersPage from '@/pages/partnership/PartnersPage';
 import CapitalAccountsPage from '@/pages/partnership/CapitalAccountsPage';
 import AllocationsPage from '@/pages/partnership/AllocationsPage';
 
+// ---- AI Intelligence pages ----
+import AiDashboardPage from '@/pages/ai/AiDashboardPage';
+import PortfolioAnalysisPage from '@/pages/ai/PortfolioAnalysisPage';
+import NlQueryPage from '@/pages/ai/NlQueryPage';
+import PredictionsPage from '@/pages/ai/PredictionsPage';
+import AiReconciliationPage from '@/pages/ai/ReconciliationPage';
+import NavCalculatorPage from '@/pages/ai/NavCalculatorPage';
+
 // ---- Other pages ----
 import InvestorPortalPage from '@/pages/investor-portal/InvestorPortalPage';
 import DataSourcesPage from '@/pages/data/DataSourcesPage';
@@ -90,6 +98,14 @@ function App() {
                 <Route path="partnership/partners" element={<PartnersPage />} />
                 <Route path="partnership/capital-accounts" element={<CapitalAccountsPage />} />
                 <Route path="partnership/allocations" element={<AllocationsPage />} />
+
+                {/* AI Intelligence */}
+                <Route path="ai/dashboard" element={<AiDashboardPage />} />
+                <Route path="ai/portfolio-analysis" element={<PortfolioAnalysisPage />} />
+                <Route path="ai/query" element={<NlQueryPage />} />
+                <Route path="ai/predictions" element={<PredictionsPage />} />
+                <Route path="ai/reconciliation" element={<AiReconciliationPage />} />
+                <Route path="ai/nav-calculator" element={<NavCalculatorPage />} />
 
                 {/* Other */}
                 <Route path="investor-portal" element={<InvestorPortalPage />} />
