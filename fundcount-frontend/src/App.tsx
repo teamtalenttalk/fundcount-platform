@@ -64,6 +64,14 @@ import TaxLotPage from '@/pages/compliance/TaxLotPage';
 import GIPSCompositePage from '@/pages/compliance/GIPSCompositePage';
 import AuditTrailPage from '@/pages/compliance/AuditTrailPage';
 
+// ---- Integration pages ----
+import MarketDataPage from '@/pages/integration/MarketDataPage';
+import CustodianPage from '@/pages/integration/CustodianPage';
+import OrderManagementPage from '@/pages/integration/OrderManagementPage';
+import InvestorPortalEnhancedPage from '@/pages/integration/InvestorPortalEnhancedPage';
+import MultiFundPage from '@/pages/integration/MultiFundPage';
+import ApiGatewayPage from '@/pages/integration/ApiGatewayPage';
+
 // ---- Other pages ----
 import InvestorPortalPage from '@/pages/investor-portal/InvestorPortalPage';
 import DataSourcesPage from '@/pages/data/DataSourcesPage';
@@ -122,6 +130,14 @@ function App() {
                 <Route path="compliance/tax-lots" element={<TaxLotPage />} />
                 <Route path="compliance/gips" element={<GIPSCompositePage />} />
                 <Route path="compliance/audit-trail" element={<AuditTrailPage />} />
+
+                {/* Integration */}
+                <Route path="integration/market-data" element={<MarketDataPage />} />
+                <Route path="integration/custodian" element={<CustodianPage />} />
+                <Route path="integration/oms" element={<OrderManagementPage />} />
+                <Route path="integration/investor-portal" element={<InvestorPortalEnhancedPage />} />
+                <Route path="integration/multi-fund" element={<MultiFundPage />} />
+                <Route path="integration/api-gateway" element={<ApiGatewayPage />} />
 
                 {/* Other */}
                 <Route path="investor-portal" element={<InvestorPortalPage />} />

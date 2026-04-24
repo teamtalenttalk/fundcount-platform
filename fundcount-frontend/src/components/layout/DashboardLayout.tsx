@@ -19,6 +19,7 @@ import {
   PanelLeft,
   Brain,
   Shield,
+  Globe,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -103,6 +104,18 @@ const navigation: NavSection[] = [
       { label: 'Tax Lots', path: '/compliance/tax-lots' },
       { label: 'GIPS Composites', path: '/compliance/gips' },
       { label: 'Audit Trail', path: '/compliance/audit-trail' },
+    ],
+  },
+  {
+    label: 'Integration',
+    icon: Globe,
+    children: [
+      { label: 'Market Data', path: '/integration/market-data' },
+      { label: 'Custodian', path: '/integration/custodian' },
+      { label: 'Order Management', path: '/integration/oms' },
+      { label: 'Investor Portal+', path: '/integration/investor-portal' },
+      { label: 'Multi-Fund', path: '/integration/multi-fund' },
+      { label: 'API Gateway', path: '/integration/api-gateway' },
     ],
   },
   { label: 'Reports', icon: BarChart3, path: '/reports' },

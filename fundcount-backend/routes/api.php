@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\AccountController;
 use App\Http\Controllers\Api\AiController;
 use App\Http\Controllers\Api\ComplianceController;
+use App\Http\Controllers\Api\IntegrationController;
 use App\Http\Controllers\Api\AssetController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CapitalAccountController;
@@ -116,5 +117,16 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/gips/{portfolio_id}', [ComplianceController::class, 'gips']);
         Route::get('/audit-trail', [ComplianceController::class, 'auditTrail']);
         Route::get('/gaap-report/{portfolio_id}', [ComplianceController::class, 'gaapReport']);
+    });
+
+    // Integration & Scale (Phase 4)
+    Route::prefix('integration')->group(function () {
+        Route::get('/market-data', [IntegrationController::class, 'marketData']);
+        Route::get('/custodian', [IntegrationController::class, 'custodian']);
+        Route::get('/oms', [IntegrationController::class, 'oms']);
+        Route::post('/oms/order', [IntegrationController::class, 'omsCreateOrder']);
+        Route::get('/investor-portal', [IntegrationController::class, 'investorPortal']);
+        Route::get('/multi-fund', [IntegrationController::class, 'multiFund']);
+        Route::get('/api-gateway', [IntegrationController::class, 'apiGateway']);
     });
 });
