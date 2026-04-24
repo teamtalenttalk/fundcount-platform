@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AccountController;
 use App\Http\Controllers\Api\AiController;
+use App\Http\Controllers\Api\ComplianceController;
 use App\Http\Controllers\Api\AssetController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CapitalAccountController;
@@ -103,5 +104,17 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/document-process', [AiController::class, 'documentProcess']);
         Route::post('/nav-calculate', [AiController::class, 'navCalculate']);
         Route::get('/dashboard', [AiController::class, 'dashboard']);
+    });
+
+    // Compliance & Reporting (Phase 3)
+    Route::prefix('compliance')->group(function () {
+        Route::get('/dashboard', [ComplianceController::class, 'dashboard']);
+        Route::post('/regulatory-check', [ComplianceController::class, 'regulatoryCheck']);
+        Route::get('/filings', [ComplianceController::class, 'filings']);
+        Route::post('/generate-report', [ComplianceController::class, 'generateReport']);
+        Route::get('/tax-lots/{portfolio_id}', [ComplianceController::class, 'taxLots']);
+        Route::get('/gips/{portfolio_id}', [ComplianceController::class, 'gips']);
+        Route::get('/audit-trail', [ComplianceController::class, 'auditTrail']);
+        Route::get('/gaap-report/{portfolio_id}', [ComplianceController::class, 'gaapReport']);
     });
 });

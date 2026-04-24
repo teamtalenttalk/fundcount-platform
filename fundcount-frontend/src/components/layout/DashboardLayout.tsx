@@ -18,6 +18,7 @@ import {
   PanelLeftClose,
   PanelLeft,
   Brain,
+  Shield,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -90,6 +91,18 @@ const navigation: NavSection[] = [
       { label: 'Predictions', path: '/ai/predictions' },
       { label: 'Reconciliation', path: '/ai/reconciliation' },
       { label: 'NAV Calculator', path: '/ai/nav-calculator' },
+    ],
+  },
+  {
+    label: 'Compliance',
+    icon: Shield,
+    children: [
+      { label: 'Dashboard', path: '/compliance/dashboard' },
+      { label: 'Regulatory Checks', path: '/compliance/regulatory' },
+      { label: 'Filings', path: '/compliance/filings' },
+      { label: 'Tax Lots', path: '/compliance/tax-lots' },
+      { label: 'GIPS Composites', path: '/compliance/gips' },
+      { label: 'Audit Trail', path: '/compliance/audit-trail' },
     ],
   },
   { label: 'Reports', icon: BarChart3, path: '/reports' },

@@ -56,6 +56,14 @@ import PredictionsPage from '@/pages/ai/PredictionsPage';
 import AiReconciliationPage from '@/pages/ai/ReconciliationPage';
 import NavCalculatorPage from '@/pages/ai/NavCalculatorPage';
 
+// ---- Compliance pages ----
+import ComplianceDashboardPage from '@/pages/compliance/ComplianceDashboardPage';
+import RegulatoryCheckPage from '@/pages/compliance/RegulatoryCheckPage';
+import FilingsPage from '@/pages/compliance/FilingsPage';
+import TaxLotPage from '@/pages/compliance/TaxLotPage';
+import GIPSCompositePage from '@/pages/compliance/GIPSCompositePage';
+import AuditTrailPage from '@/pages/compliance/AuditTrailPage';
+
 // ---- Other pages ----
 import InvestorPortalPage from '@/pages/investor-portal/InvestorPortalPage';
 import DataSourcesPage from '@/pages/data/DataSourcesPage';
@@ -106,6 +114,14 @@ function App() {
                 <Route path="ai/predictions" element={<PredictionsPage />} />
                 <Route path="ai/reconciliation" element={<AiReconciliationPage />} />
                 <Route path="ai/nav-calculator" element={<NavCalculatorPage />} />
+
+                {/* Compliance */}
+                <Route path="compliance/dashboard" element={<ComplianceDashboardPage />} />
+                <Route path="compliance/regulatory" element={<RegulatoryCheckPage />} />
+                <Route path="compliance/filings" element={<FilingsPage />} />
+                <Route path="compliance/tax-lots" element={<TaxLotPage />} />
+                <Route path="compliance/gips" element={<GIPSCompositePage />} />
+                <Route path="compliance/audit-trail" element={<AuditTrailPage />} />
 
                 {/* Other */}
                 <Route path="investor-portal" element={<InvestorPortalPage />} />
