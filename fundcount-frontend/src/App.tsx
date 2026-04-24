@@ -72,6 +72,14 @@ import InvestorPortalEnhancedPage from '@/pages/integration/InvestorPortalEnhanc
 import MultiFundPage from '@/pages/integration/MultiFundPage';
 import ApiGatewayPage from '@/pages/integration/ApiGatewayPage';
 
+// ---- Enterprise pages ----
+import TenantsPage from '@/pages/enterprise/TenantsPage';
+import WhiteLabelPage from '@/pages/enterprise/WhiteLabelPage';
+import BillingPage from '@/pages/enterprise/BillingPage';
+import SecurityPage from '@/pages/enterprise/SecurityPage';
+import ReportBuilderPage from '@/pages/enterprise/ReportBuilderPage';
+import AdminPanelPage from '@/pages/enterprise/AdminPanelPage';
+
 // ---- Other pages ----
 import InvestorPortalPage from '@/pages/investor-portal/InvestorPortalPage';
 import DataSourcesPage from '@/pages/data/DataSourcesPage';
@@ -138,6 +146,14 @@ function App() {
                 <Route path="integration/investor-portal" element={<InvestorPortalEnhancedPage />} />
                 <Route path="integration/multi-fund" element={<MultiFundPage />} />
                 <Route path="integration/api-gateway" element={<ApiGatewayPage />} />
+
+                {/* Enterprise */}
+                <Route path="enterprise/tenants" element={<TenantsPage />} />
+                <Route path="enterprise/white-label" element={<WhiteLabelPage />} />
+                <Route path="enterprise/billing" element={<BillingPage />} />
+                <Route path="enterprise/security" element={<SecurityPage />} />
+                <Route path="enterprise/report-builder" element={<ReportBuilderPage />} />
+                <Route path="enterprise/admin-panel" element={<AdminPanelPage />} />
 
                 {/* Other */}
                 <Route path="investor-portal" element={<InvestorPortalPage />} />

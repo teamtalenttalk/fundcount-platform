@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AccountController;
 use App\Http\Controllers\Api\AiController;
 use App\Http\Controllers\Api\ComplianceController;
 use App\Http\Controllers\Api\IntegrationController;
+use App\Http\Controllers\Api\EnterpriseController;
 use App\Http\Controllers\Api\AssetController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CapitalAccountController;
@@ -128,5 +129,15 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/investor-portal', [IntegrationController::class, 'investorPortal']);
         Route::get('/multi-fund', [IntegrationController::class, 'multiFund']);
         Route::get('/api-gateway', [IntegrationController::class, 'apiGateway']);
+    });
+
+    // Enterprise & White Label (Phase 5)
+    Route::prefix('enterprise')->group(function () {
+        Route::get('/tenants', [EnterpriseController::class, 'tenants']);
+        Route::get('/white-label', [EnterpriseController::class, 'whiteLabel']);
+        Route::get('/billing', [EnterpriseController::class, 'billing']);
+        Route::get('/security', [EnterpriseController::class, 'security']);
+        Route::get('/report-builder', [EnterpriseController::class, 'reportBuilder']);
+        Route::get('/admin-panel', [EnterpriseController::class, 'adminPanel']);
     });
 });

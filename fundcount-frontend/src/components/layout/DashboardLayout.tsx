@@ -20,6 +20,7 @@ import {
   Brain,
   Shield,
   Globe,
+  Crown,
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
@@ -116,6 +117,18 @@ const navigation: NavSection[] = [
       { label: 'Investor Portal+', path: '/integration/investor-portal' },
       { label: 'Multi-Fund', path: '/integration/multi-fund' },
       { label: 'API Gateway', path: '/integration/api-gateway' },
+    ],
+  },
+  {
+    label: 'Enterprise',
+    icon: Crown,
+    children: [
+      { label: 'Tenants', path: '/enterprise/tenants' },
+      { label: 'White Label', path: '/enterprise/white-label' },
+      { label: 'Billing', path: '/enterprise/billing' },
+      { label: 'Security', path: '/enterprise/security' },
+      { label: 'Report Builder', path: '/enterprise/report-builder' },
+      { label: 'Admin Panel', path: '/enterprise/admin-panel' },
     ],
   },
   { label: 'Reports', icon: BarChart3, path: '/reports' },
